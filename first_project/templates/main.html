@@ -27,6 +27,24 @@
         	font-weight:lighter;
         	font-size:1.2em;
         }
+        .popup {
+  			position: relative;
+			display: inline-block;
+			cursor: pointer;
+			visibility: hidden;
+			width: 160px;
+			background-color: #555;
+			color: #fff;
+			text-align: center;
+			border-radius: 6px;
+			padding: 8px 0;
+			position: absolute;
+			z-index: 1;
+			bottom: 125%;
+			left: 50%;
+			margin-left: -80px;
+			
+		}
 	</style>
 </head>
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
@@ -249,8 +267,8 @@
 												reader.readAsDataURL(event.target.files[0]);
 										}
 							</script>
-							<div id="pop_login" style="display:none; width:400px; height:400px; "></div>
-            				<input type="submit" value="신고하기" id="report_btn" style="float:right;" onclick="btn_click()">
+							<div class="popup" id="popup_login"></div>
+            				<input type="button" value="신고하기" id="report_btn" style="float:right;" onclick="btn_click()">
 							<script>
 								function btn_click(){
 									if(document.getElementById("").style.display=='none'){
