@@ -1,0 +1,642 @@
+{% load static %}
+
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>기미바콩project</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+	<link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
+<!--  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+<!--  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>-->
+<!--  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>-->
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Sunflower:wght@300&display=swap');
+		body {
+            font-family: 'Sunflower', sans-serif; /* google web font*/
+            font-size:16px;
+         }
+        .site-hero{
+        	font-family: 'East Sea Dokdo', cursive;
+        }
+        .table_category{
+        	font-weight:lighter;
+        	font-size:1.2em;
+        }
+	</style>
+</head>
+<body data-spy="scroll" data-target="#pb-navbar" data-offset="200">
+
+	<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
+
+		<div class="container">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
+<!--					<li class="nav-item"><a class="nav-link" href="#section-about">소개하기</a></li>-->
+					<li class="nav-item"><a class="nav-link" href="#section-registration">신고하기</a></li>
+					<li class="nav-item"><a class="nav-link" href="#section-abc">조회하기</a></li>
+					<li class="nav-item"><a class="nav-link" href="#section-portfolio">유기견 소개</a></li>
+					<li class="nav-item"><a class="nav-link" href="#section-resume">가까운 병원/센터찾기</a></li>
+					<li class="nav-item"><a class="nav-link" href="#section-coment">안내사항</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+
+
+	<section class="site-hero" style="background-image: url({% static 'images/main_dog.jpg' %});" id="section-home" data-stellar-background-ratio="0.5">
+		<div class="container">
+			<div class="row intro-text align-items-center justify-content-center">
+				<div class="col-md-10 text-center pt-5">
+
+					<h1 class="site-heading site-animate">발견하셨다면 주저말고
+						<strong class="d-block"><span style="color:red">'신고'</span></strong>해주세요</h1>
+					<strong class="d-block text-white text-uppercase letter-spacing">please save the endangered animals.</strong>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="site-section" id="section-about">
+<!--		<div class="container">-->
+<!--			<div class="section-heading text-center">-->
+<!--						<h2><strong style="color:orange">소개</strong> 하기</h2>-->
+<!--					</div>-->
+<!--			<div class="row mb-5 align-items-center">-->
+<!--				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">-->
+<!--					<img src="images/Jennifer.png" alt="Image placeholder" class="img-fluid">-->
+<!--				</div>-->
+<!--				<div class="col-lg-5 pl-lg-5">-->
+<!--					<div class="section-heading">-->
+<!--						<h2>이동규</h2>-->
+<!--					</div>-->
+<!--					<p class="lead">1993.11.29</p>-->
+<!--					<p class="lead">010-8959-4779</p>-->
+<!--					<p class="lead">dlehdrb1129@naver.com</p>-->
+<!--&lt;!&ndash;					<p>&ndash;&gt;-->
+<!--						<a href="#" class="social-item"><span class="icon-instagram2" onclick="location.href='https://www.instagram.com/dk_lee__/';"> instagram</span></a>-->
+<!--&lt;!&ndash;					</p>&ndash;&gt;-->
+<!--				</div>-->
+<!--			</div>-->
+
+<!--			<div class="row mb-5 align-items-center">-->
+<!--				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">-->
+<!--					<img src="images/Katrine.png" alt="Image placeholder" class="img-fluid">-->
+<!--				</div>-->
+<!--				<div class="col-lg-5 pl-lg-5">-->
+<!--					<div class="section-heading">-->
+<!--						<h2>박성준</h2>-->
+<!--					</div>-->
+<!--					<p class="lead">1993.05.04</p>-->
+<!--					<p class="lead">010-5129-4770</p>-->
+<!--					<p>-->
+<!--						<a href="#" class="social-item"><span class="icon-instagram2" onclick="location.href='https://www.instagram.com/piaojian_0504/';"></span></a>-->
+<!--					</p>-->
+<!--				</div>-->
+<!--			</div>-->
+
+<!--			<div class="row mb-5 align-items-center">-->
+<!--				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">-->
+<!--					<img src="images/Pets.png" alt="Image placeholder" class="img-fluid">-->
+<!--				</div>-->
+<!--				<div class="col-lg-5 pl-lg-5">-->
+<!--					<div class="section-heading">-->
+<!--						<h2>김민영</h2>-->
+<!--					</div>-->
+<!--					<p class="lead">1996.02.07</p>-->
+<!--					<p class="lead">010-9998-2948</p>-->
+<!--					<p>-->
+<!--						<a href="#" class="social-item"><span class="icon-instagram2" onclick="location.href='https://www.instagram.com/my_kim27/';"></span></a>-->
+<!--					</p>-->
+<!--				</div>-->
+<!--			</div>-->
+
+<!--			<div class="row mb-5 align-items-center">-->
+<!--				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">-->
+<!--					<img src="images/Woody.png" alt="Image placeholder" class="img-fluid">-->
+<!--				</div>-->
+<!--				<div class="col-lg-5 pl-lg-5">-->
+<!--					<div class="section-heading">-->
+<!--						<h2>홍연하</h2>-->
+<!--					</div>-->
+<!--					<p class="lead">1997.01.10</p>-->
+<!--					<p class="lead">010-9338-1483</p>-->
+<!--					<p>-->
+<!--						<a href="#" class="social-item"><span class="icon-instagram2" onclick="location.href='https://www.instagram.com/yyeoona/';"></span></a>-->
+<!--					</p>-->
+<!--				</div>-->
+<!--			</div>-->
+
+
+<!--		</div>-->
+	</section>
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   		integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   		crossorigin=""/>
+	<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   		integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   		crossorigin=""></script>
+	<section class="site-section" id="section-registration">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mb-5">
+					<div class="section-heading text-center">
+						<h2>신고/검색하기</h2>
+					</div>
+				</div>
+
+				<div class="col-md-7 mb-5 mb-md-0">
+					<form method="POST" action="" class="site-form">
+						<h3 class="mb-5">신고하기</h3>
+						<table style="border-collapse: separate; border-spacing: 0 10px; font-weight:lighter;"> <!--<tr>간 간격 주기-->
+<!--							<tr>-->
+<!--								<th>공고번호</th>-->
+<!--								<td></td>-->
+<!--							</tr>-->
+							<tr>
+								<th class="table_category">분류</th>
+								<td>
+									<select>
+										<option value="" selected disabled hidden>==선택하세요==</option>
+										<option value="말티즈">말티즈</option>
+										<option value="웰시코기">웰시코기</option>
+										<option value="요크셔테리어">요크셔테리어</option>
+										<option value="푸들">푸들</option>
+										<option value="시츄">시츄</option>
+										<option value="비숑프리제">비숑프리제</option>
+										<option value="치와와">치와와</option>
+										<option value="진돗개">진돗개</option>
+										<option value="닥스훈트">닥스훈트</option>
+										<option value="요크셔테리어">요크셔테리어</option>
+										<option value="비글">비글</option>
+										<option value="페키니즈">페키니즈</option>
+										<option value="코카스파니엘">코카스파니엘</option>
+										<option value="시바견">시바견</option>
+										<option value="핏볼테리언">핏볼테리언</option>
+										<option value="요크셔테리어">요크셔테리어</option>
+										<option value="기타">기타</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th class="table_category">색상</th>
+								<td><input type="text" placeholder="색을 입력하세요." name="subject" required/></td>
+							</tr>
+							<tr>
+								<th class="table_category">접수일시</th>
+								<td><input type="date" name="day" required/></td>
+							</tr>
+							<tr>
+								<th class="table_category">성별</th>
+								<td>
+									<input type="radio" name="sex" value="남" required/>  남
+									<input type="radio" name="sex" value="여" required/>  여
+									<input type="radio" name="sex" value="확인불가" required/>  확인불가
+								</td>
+							</tr>
+							<tr>
+								<th class="table_category">특징</th>
+								<td><input type="text" placeholder="이름표, 성격, 생김새 등" name="subject" required/></td>
+							</tr>
+							<tr>
+								<th class="table_category">신고자 전화번호</th>
+								<td><input type="tel" placeholder="전화번호를 입력하세요." name="tel" required/></td>
+							</tr>
+							<tr>
+								<th class="table_category">발생장소</th>
+								<td>
+									<input type="text" placeholder="장소를 입력하세요." id="address_id" required/>
+								</td>
+							<tr>
+								<th class="table_category">공고기한</th>
+								<td style="color:orange;">신고일자로부터 15일간 공고됨</td>
+							</tr>
+						</table>
+						<div class="lost-content-info-text">
+							<span style="color:red">*유기동물 문의는 보호센터에 연락하시길 바랍니다.</span>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-5 pl-md-5">
+					<h3 class="mb-5">사진 등록하기</h3>
+						<form method="POST" action="upload" enctype="multipart/form-data" onchange="setThumbnail(event);">
+             				<input type="file" name="photofile" accept="image/*" >
+            				<div class="image_div" id='image_container' style="width:400px; height:400px;"></div>
+            				<script>
+            				//이미지 파일 저장하기
+								function setThumbnail(event) {
+									var reader = new FileReader();
+										reader.onload = function(event) {
+												var img = document.createElement("img");
+												img.setAttribute("src", event.target.result);
+												img.setAttribute("width", "350px");
+												img.setAttribute("height", "350px");
+												document.querySelector("div#image_container").appendChild(img); };
+												reader.readAsDataURL(event.target.files[0]);
+										}
+							</script>
+							<div id="pop_login" style="display:none; width:400px; height:400px; "></div>
+            				<input type="submit" value="신고하기" id="report_btn" style="float:right;" onclick="btn_click()">
+							<script>
+								function btn_click(){
+									if(document.getElementById("").style.display=='none'){
+										document.getElementById("report_btn").style.opacity='0.7';
+										document.getElementById("pop_login").style.display='block';
+										}
+
+
+							</script>
+
+        				</form>
+<!--					<ul class="site-contact-details">-->
+<!--						<li>-->
+<!--							<span class="text-uppercase">Email</span>-->
+<!--							site@gmail.com-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<span class="text-uppercase">Phone</span>-->
+<!--							+30 976 1382 9921-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<span class="text-uppercase">Fax</span>-->
+<!--							+30 976 1382 9922-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<span class="text-uppercase">Address</span>-->
+<!--							San Francisco, CA <br>-->
+<!--							4th Floor8 Lower  <br>-->
+<!--							San Francisco street, M1 50F-->
+<!--						</li>-->
+<!--					</ul>-->
+				</div>
+			</div>
+
+
+		</div>
+	</section>
+
+	<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+	<section class="site-section" id="section-portfolio">
+		<div class="container">
+			<div class="row">
+				<div class="section-heading text-center col-md-12">
+					<h2>유기견 소개</h2>
+				</div>
+			</div>
+			<div class="filters">
+				<ul>
+					<li data-filter=".bs123" onclick="bs_show_card();" id="bs_show">동물보호관리협회</li>
+					<li data-filter=".gj123" onclick="gj_show_card();" id="gj_show">광주동물보호소</li>
+					<li data-filter=".ny123" onclick="ny_show_card();" id="ny_show">남양주동물보호협회</li>
+					<li data-filter=".yy123" onclick="yy_show_card();" id="yy_show">양양군유기동물보호소</li>
+				</ul>
+			</div>
+
+			<div class="filters-content" id="filter_area">
+				<script>
+					function bs_show_card(){
+						var con1 = document.getElementById("img1");
+						if(con1.style.display=='none'){
+							con1.style.display = 'block';
+							document.getElementById("img2").style.display='none';
+							document.getElementById("img3").style.display='none';
+							document.getElementById("img4").style.display='none';
+						}
+					}
+					function gj_show_card(){
+						var con2 = document.getElementById("img2");
+						if(con2.style.display=='none'){
+							con2.style.display = 'block';
+							var con1 = document.getElementById("img1");
+							document.getElementById("img1").style.display='none';
+							document.getElementById("img3").style.display='none';
+							document.getElementById("img4").style.display='none';
+						}
+					}
+					function ny_show_card(){
+						var con3 = document.getElementById("img3");
+						if(con3.style.display=='none'){
+							con3.style.display = 'block';
+							document.getElementById("img1").style.display='none';
+							document.getElementById("img2").style.display='none';
+							document.getElementById("img4").style.display='none';
+						}
+					}
+					function yy_show_card(){
+						var con4 = document.getElementById("img4");
+						if(con4.style.display=='none'){
+							con4.style.display = 'block';
+							document.getElementById("img1").style.display='none';
+							document.getElementById("img2").style.display='none';
+							document.getElementById("img3").style.display='none';
+						}
+					}
+
+				</script>
+				<div id="row_123" class="row grid">
+					<div class="single-portfolio all bs123">
+						<div class="relative">
+							<div class="thumb">
+								<div class="img_1" style="display:none;" id="img1">
+								<script>
+									const dom = $('.img_1');
+									let content = "";
+									  let aa = $.ajax("{% static 'content/bs.xml' %}")
+										.done(function(data){
+											$(data).find('item').each(function(){
+											  var picture = $(this).find('popfile').text();
+											  var type = $(this).find('kindCd').text();
+											  var age = $(this).find('age').text();
+											  var weight = $(this).find('weight').text();
+											  var shelter = $(this).find('careNm').text();
+
+											  content += "<div class='card' style='width:200px; height:300px; background-color:transparent; float:left; margin:10px;'><img style='width:200px; height:150px;' class='card-img-top' src='"+picture+"' alt='Card image' width='50'>"+
+												"<div class='card-body'><div class='card-title' style='font-weight:bold'>"+ shelter.toLocaleString() +
+												"</div><p class='card-text'><div>"+ type.toLocaleString() +
+												"</div><div>"+ age.toLocaleString() +
+												"</div><div>"+ weight.toLocaleString() +
+												"</div></p>"+
+												"</div></div>"
+											  });
+											  $(".img_1").append(content);
+										});
+
+								</script>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="single-portfolio all gj123">
+						<div class="relative">
+							<div class="thumb">
+								<div class="img_2" style="display:none;" id="img2">
+								<script>
+									const dom2 = $('.img_2');
+									let content2 = "";
+									  let aa2 = $.ajax("{% static 'content/gj.xml' %}")
+										.done(function(data){
+											$(data).find('item').each(function(){
+											  var picture = $(this).find('popfile').text();
+											  var type = $(this).find('kindCd').text();
+											  var age = $(this).find('age').text();
+											  var weight = $(this).find('weight').text();
+											  var shelter = $(this).find('careNm').text();
+
+											  content2 += "<div class='card' style='width:200px; height:300px; background-color:transparent; float:left; margin:10px;'><img style='width:200px; height:150px;' class='card-img-top' src='"+picture+"' alt='Card image' width='50'>"+
+												"<div class='card-body'><div class='card-title' style='font-weight:bold'>"+ shelter.toLocaleString() +
+												"</div><p class='card-text'><div>"+ type.toLocaleString() +
+												"</div><div>"+ age.toLocaleString() +
+												"</div><div>"+ weight.toLocaleString() +
+												"</div></p>"+
+												"</div></div>"
+											  });
+											  $(".img_2").append(content2);
+										});
+								</script>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="single-portfolio all ny123">
+						<div class="relative">
+							<div class="thumb">
+								<div class="img_3" style="display:none;" id="img3">
+								<script>
+									const dom3 = $('.img_3');
+									let content3 = "";
+									  let aa3 = $.ajax("{% static 'content/ny.xml' %}")
+										.done(function(data){
+											$(data).find('item').each(function(){
+											  var picture = $(this).find('popfile').text();
+											  var type = $(this).find('kindCd').text();
+											  var age = $(this).find('age').text();
+											  var weight = $(this).find('weight').text();
+											  var shelter = $(this).find('careNm').text();
+
+											  content3 += "<div class='card' style='width:200px; height:300px; background-color:transparent; float:left; margin:10px;'><img style='width:200px; height:150px;' class='card-img-top' src='"+picture+"' alt='Card image' width='50'>"+
+												"<div class='card-body'><div class='card-title' style='font-weight:bold'>"+ shelter.toLocaleString() +
+												"</div><p class='card-text'><div>"+ type.toLocaleString() +
+												"</div><div>"+ age.toLocaleString() +
+												"</div><div>"+ weight.toLocaleString() +
+												"</div></p>"+
+												"</div></div>"
+											  });
+											  $(".img_3").append(content3);
+										});
+								</script>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="single-portfolio all yy123">
+						<div class="relative">
+							<div class="thumb">
+								<div class="img_4" style="display:none;" id="img4">
+								<script>
+									const dom4 = $('.img_4');
+									let content4 = "";
+									  let aa4 = $.ajax("{% static 'content/yy.xml' %}")
+										.done(function(data){
+											$(data).find('item').each(function(){
+											  var picture = $(this).find('popfile').text();
+											  var type = $(this).find('kindCd').text();
+											  var age = $(this).find('age').text();
+											  var weight = $(this).find('weight').text();
+											  var shelter = $(this).find('careNm').text();
+
+											  content4 += "<div class='card' style='width:200px; height:300px; background-color:transparent; float:left; margin:10px;'><img style='width:200px; height:150px;' class='card-img-top' src='"+picture+"' alt='Card image' width='50'>"+
+												"<div class='card-body'><div class='card-title' style='font-weight:bold'>"+ shelter.toLocaleString() +
+												"</div><p class='card-text'><div>"+ type.toLocaleString() +
+												"</div><div>"+ age.toLocaleString() +
+												"</div><div>"+ weight.toLocaleString() +
+												"</div></p>"+
+												"</div></div>"
+											  });
+											  $(".img_4").append(content4);
+										});
+								</script>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- .section -->
+
+	<section class="site-section " id="section-resume">
+		<div class="container">
+			<div class="row">
+<!--				<div class="col-md-6">-->
+
+
+<!--					<h2 class="mb-5">Experience</h2>-->
+
+<!--					<div class="resume-item mb-4">-->
+<!--						<span class="date"><span class="icon-calendar"></span> March 2013 - Present</span>-->
+<!--						<h3>Lead Product Designer</h3>-->
+<!--						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+<!--						<span class="school">Github</span>-->
+<!--					</div>-->
+
+<!--					<div class="resume-item mb-4">-->
+<!--						<span class="date"><span class="icon-calendar"></span> March 2013 - Present</span>-->
+<!--						<h3>Lead Product Designer</h3>-->
+<!--						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+<!--						<span class="school">Facebook</span>-->
+<!--					</div>-->
+
+<!--					<div class="resume-item mb-4">-->
+<!--						<span class="date"><span class="icon-calendar"></span> March 2013 - Present</span>-->
+<!--						<h3>Lead Product Designer</h3>-->
+<!--						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+<!--						<span class="school">Twitter</span>-->
+<!--					</div>-->
+
+<!--					<div class="resume-item mb-4">-->
+<!--						<span class="date"><span class="icon-calendar"></span> March 2013 - Present</span>-->
+<!--						<h3>Lead Product Designer</h3>-->
+<!--						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>-->
+<!--						<span class="school">Shopify</span>-->
+<!--					</div>-->
+
+
+<!--				</div>-->
+			</div>
+		</div>
+	</section> <!-- .section -->
+
+	<section class="site-section" id="section-coment">
+		<div class="container">
+			<div class="row mb-5">
+				<div class="col-md-12">
+					<div class="section-heading text-center">
+						<h2><strong>습득시 안내</strong></h2>
+						<strong class="d-block text-white text-uppercase letter-spacing">누군가의 반려동물을 보호하고 계신가요?</strong>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+
+					<div class="block-47 d-flex mb-5">
+						<div class="block-47-image">
+							<img src="{% static 'images/Jennifer.png' %}" alt="Image placeholder" class="img-fluid">
+						</div>
+						<blockquote class="block-47-quote">
+							<p>&ldquo;공공장소를 떠돌거나 버려진 동물을 발견한 경우 관할 시ㆍ군ㆍ구청과 해당 유기동물 보호시설에 신고해야 합니다.&rdquo;</p>
+<!--							<cite class="block-47-quote-author">&mdash; </cite>-->
+						</blockquote>
+					</div>
+
+				</div>
+				<div class="col-md-6">
+
+					<div class="block-47 d-flex mb-5">
+						<div class="block-47-image">
+							<img src="{% static 'images/Katrine.png' %}" alt="Image placeholder" class="img-fluid">
+						</div>
+						<blockquote class="block-47-quote">
+							<p>&ldquo;유기동물을 주인 없는 동물이라 여겨 마음대로 잡아서 팔거나 죽이면 2년 이하의 징역 또는 2천만원 이하의 벌금을 내게 됩니다.&rdquo;</p>
+<!--							<cite class="block-47-quote-author">&mdash; </cite>-->
+						</blockquote>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+
+					<div class="block-47 d-flex mb-5">
+						<div class="block-47-image">
+							<img src="{% static 'images/Pets.png' %}" alt="Image placeholder" class="img-fluid">
+						</div>
+						<blockquote class="block-47-quote">
+							<p>&ldquo;시장ㆍ군수ㆍ구청장은 관내에서 발견된 유기동물이 보호받을 수 있도록 필요한 조치를 해야 하며, 주인을 찾을 수 있도록 그 사실을 7 일 이상 공고해야 합니다.&rdquo;</p>
+<!--							<cite class="block-47-quote-author">&mdash; </cite>-->
+						</blockquote>
+					</div>
+
+				</div>
+				<div class="col-md-6">
+
+					<div class="block-47 d-flex mb-5">
+						<div class="block-47-image">
+							<img src="{% static 'images/Woody.png' %}" alt="Image placeholder" class="img-fluid">
+						</div>
+						<blockquote class="block-47-quote">
+							<p>&ldquo;공고 후 10일이 지나도 주인을 찾지 못한 경우, 해당 시ㆍ군ㆍ구등이 동물의 소유권을 갖게 되어 개인에게 기증하거나 분양할 수 있습니다.&rdquo;</p>
+<!--							<cite class="block-47-quote-author">&mdash; </cite>-->
+						</blockquote>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<footer class="site-footer">
+		<div class="container">
+
+			<div class="row mb-5">
+				<p class="col-12 text-center">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy; <script>document.write(new Date().getFullYear());</script>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+			</div>
+			
+			<div class="row mb-5">
+				<div class="col-md-12 text-center">
+					<p>
+
+						이동규_<a href="#" class="social-item"><span class="icon-instagram2" onclick="location.href='https://www.instagram.com/dk_lee__/';"></span></a>
+						박성준_<a href="#" class="social-item"><span class="icon-instagram2" onclick="location.href='https://www.instagram.com/piaojian_0504/';"></span></a>
+						김민영_<a href="#" class="social-item"><span class="icon-instagram2" onclick="location.href='https://www.instagram.com/my_kim27/';"></span></a>
+						홍연하_<a href="#" class="social-item"><span class="icon-instagram2" onclick="location.href='https://www.instagram.com/yyeoona/';"></span></a>
+					</p>
+				</div>
+			</div>
+			
+		</div>
+	</footer>
+
+<!--	<script src="{% static 'js/vendor/jquery-migrate-3.0.1.min.js' %}"></script>-->
+	<script src="{% static 'js/vendor/popper.min.js' %}"></script>
+	<script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/vendor/jquery.min.js' %}"></script>
+
+	<script src="{% static 'js/vendor/jquery.easing.1.3.js' %}"></script>
+
+	<script src="{% static 'js/vendor/jquery.stellar.min.js' %}"></script>
+	<script src="{% static 'js/vendor/jquery.waypoints.min.js' %}"></script>
+
+	<script src="{% static 'js/custom.js' %}"></script>
+
+	<!-- Google Map -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    	<script src="js/google-map.js"></script> -->
+
+    </body>
+    </html>

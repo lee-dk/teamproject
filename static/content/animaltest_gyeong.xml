@@ -1,0 +1,105 @@
+<response>
+<header>
+<resultCode>00</resultCode>
+<resultMsg>NORMAL SERVICE.</resultMsg>
+</header>
+<body>
+<items>
+<item>
+<age>2018(년생)</age>
+<careAddr>경상북도 경산시 용성면 사양지길 95 (용성면) </careAddr>
+<careNm>경산시유기동물보호소</careNm>
+<careTel>010-3730-9267</careTel>
+<colorCd>검정, 흰색</colorCd>
+<desertionNo>447513202000701</desertionNo>
+<filename>http://www.animal.go.kr/files/shelter/2020/07/202008161708593_s.jpg</filename>
+<happenDt>20200816</happenDt>
+<happenPlace>신천동</happenPlace>
+<kindCd>[개] 포인터</kindCd>
+<neuterYn>N</neuterYn>
+<noticeEdt>20200826</noticeEdt>
+<noticeNo>경북-경산-2020-00698</noticeNo>
+<noticeSdt>20200816</noticeSdt>
+<officetel>053-810-6745</officetel>
+<orgNm>경상북도 경산시</orgNm>
+<popfile>http://www.animal.go.kr/files/shelter/2020/07/202008161708593.jpg</popfile>
+<processState>보호중</processState>
+<sexCd>F</sexCd>
+<specialMark>진못 인근 포도밭에서 구조, 분홍색 목태 착용</specialMark>
+<weight>15.4(Kg)</weight>
+</item>
+<item>
+<age>2018(년생)</age>
+<careAddr>경상북도 경산시 용성면 사양지길 95 (용성면) </careAddr>
+<careNm>경산시유기동물보호소</careNm>
+<careTel>010-3730-9267</careTel>
+<colorCd>흰색, 갈색</colorCd>
+<desertionNo>447513202000700</desertionNo>
+<filename>http://www.animal.go.kr/files/shelter/2020/07/202008161708624_s.jpg</filename>
+<happenDt>20200816</happenDt>
+<happenPlace>신천동</happenPlace>
+<kindCd>[개] 잉글리쉬 세터</kindCd>
+<neuterYn>N</neuterYn>
+<noticeEdt>20200826</noticeEdt>
+<noticeNo>경북-경산-2020-00697</noticeNo>
+<noticeSdt>20200816</noticeSdt>
+<officetel>053-810-6745</officetel>
+<orgNm>경상북도 경산시</orgNm>
+<popfile>http://www.animal.go.kr/files/shelter/2020/07/202008161708624.jpg</popfile>
+<processState>보호중</processState>
+<sexCd>F</sexCd>
+<specialMark>진못 인근 포도밭에서 구조, 분홍색 목태 착용</specialMark>
+<weight>11.6(Kg)</weight>
+</item>
+<item>
+<age>2017(년생)</age>
+<careAddr>경상북도 경산시 용성면 사양지길 95 (용성면) </careAddr>
+<careNm>경산시유기동물보호소</careNm>
+<careTel>010-3730-9267</careTel>
+<colorCd>갈색, 흰색</colorCd>
+<desertionNo>447513202000699</desertionNo>
+<filename>http://www.animal.go.kr/files/shelter/2020/07/202008160908515_s.jpg</filename>
+<happenDt>20200816</happenDt>
+<happenPlace>곡란리</happenPlace>
+<kindCd>[개] 믹스견</kindCd>
+<neuterYn>N</neuterYn>
+<noticeEdt>20200826</noticeEdt>
+<noticeNo>경북-경산-2020-00696</noticeNo>
+<noticeSdt>20200816</noticeSdt>
+<officetel>053-810-6745</officetel>
+<orgNm>경상북도 경산시</orgNm>
+<popfile>http://www.animal.go.kr/files/shelter/2020/07/202008160908515.jpg</popfile>
+<processState>보호중</processState>
+<sexCd>F</sexCd>
+<specialMark>곡란리 인근 쉼터에서 배회</specialMark>
+<weight>3.9(Kg)</weight>
+</item>
+<item>
+<age>2020(년생)</age>
+<careAddr>경상북도 경산시 용성면 사양지길 95 (용성면) </careAddr>
+<careNm>경산시유기동물보호소</careNm>
+<careTel>010-3730-9267</careTel>
+<colorCd>갈색</colorCd>
+<desertionNo>447513202000698</desertionNo>
+<filename>http://www.animal.go.kr/files/shelter/2020/07/202008160908306_s.jpg</filename>
+<happenDt>20200816</happenDt>
+<happenPlace>삼북동</happenPlace>
+<kindCd>[개] 믹스견</kindCd>
+<neuterYn>N</neuterYn>
+<noticeEdt>20200826</noticeEdt>
+<noticeNo>경북-경산-2020-00695</noticeNo>
+<noticeSdt>20200816</noticeSdt>
+<officetel>053-810-6745</officetel>
+<orgNm>경상북도 경산시</orgNm>
+<popfile>http://www.animal.go.kr/files/shelter/2020/07/202008160908306.jpg</popfile>
+<processState>보호중</processState>
+<sexCd>M</sexCd>
+<specialMark>생후 7개월 추정, 삼북주공옆 골목에서 배회</specialMark>
+<weight>4(Kg)</weight>
+</item>
+</items>
+<numOfRows>30</numOfRows>
+<pageNo>1</pageNo>
+<totalCount>8779</totalCount>
+</body>
+</response>

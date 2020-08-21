@@ -1,0 +1,133 @@
+<response>
+<header>
+<resultCode>00</resultCode>
+<resultMsg>NORMAL SERVICE.</resultMsg>
+</header>
+<body>
+<items>
+<item>
+<age>2018(년생)</age>
+<careAddr>경상남도 양산시 동면 석산리 392 양산시농업기술센터</careAddr>
+<careNm>양산시유기동물보호소</careNm>
+<careTel>055-392-5337</careTel>
+<chargeNm>양산시</chargeNm>
+<colorCd>흰색검정</colorCd>
+<desertionNo>448538202000443</desertionNo>
+<filename>http://www.animal.go.kr/files/shelter/2020/07/202008161708510_s.jpg</filename>
+<happenDt>20200816</happenDt>
+<happenPlace>중부동664-8</happenPlace>
+<kindCd>[개] 달마시안</kindCd>
+<neuterYn>U</neuterYn>
+<noticeEdt>20200826</noticeEdt>
+<noticeNo>경남-양산-2020-00221</noticeNo>
+<noticeSdt>20200816</noticeSdt>
+<officetel>055-392-5364</officetel>
+<orgNm>경상남도 양산시</orgNm>
+<popfile>http://www.animal.go.kr/files/shelter/2020/07/202008161708510.jpg</popfile>
+<processState>보호중</processState>
+<sexCd>M</sexCd>
+<specialMark>흰색검정 분홍목테착용</specialMark>
+<weight>16(Kg)</weight>
+</item>
+<item>
+<age>2015(년생)</age>
+<careAddr>경상남도 양산시 동면 석산리 392 양산시농업기술센터</careAddr>
+<careNm>양산시유기동물보호소</careNm>
+<careTel>055-392-5337</careTel>
+<chargeNm>양산시</chargeNm>
+<colorCd>흰색</colorCd>
+<desertionNo>448538202000442</desertionNo>
+<filename>http://www.animal.go.kr/files/shelter/2020/07/202008161708438_s.jpg</filename>
+<happenDt>20200816</happenDt>
+<happenPlace>상북면통도참숯가마</happenPlace>
+<kindCd>[개] 말티즈</kindCd>
+<neuterYn>U</neuterYn>
+<noticeEdt>20200826</noticeEdt>
+<noticeNo>경남-양산-2020-00220</noticeNo>
+<noticeSdt>20200816</noticeSdt>
+<officetel>055-392-5364</officetel>
+<orgNm>경상남도 양산시</orgNm>
+<popfile>http://www.animal.go.kr/files/shelter/2020/07/202008161708438.jpg</popfile>
+<processState>보호중</processState>
+<sexCd>M</sexCd>
+<specialMark>흰색</specialMark>
+<weight>3.0(Kg)</weight>
+</item>
+<item>
+<age>2016(년생)</age>
+<careAddr>경상남도 양산시 동면 석산리 392 양산시농업기술센터</careAddr>
+<careNm>양산시유기동물보호소</careNm>
+<careTel>055-392-5337</careTel>
+<chargeNm>양산시</chargeNm>
+<colorCd>갈색</colorCd>
+<desertionNo>448538202000441</desertionNo>
+<filename>http://www.animal.go.kr/files/shelter/2020/07/202008161708607_s.jpg</filename>
+<happenDt>20200816</happenDt>
+<happenPlace>음악분수공원</happenPlace>
+<kindCd>[개] 퍼그</kindCd>
+<neuterYn>U</neuterYn>
+<noticeEdt>20200826</noticeEdt>
+<noticeNo>경남-양산-2020-00219</noticeNo>
+<noticeSdt>20200816</noticeSdt>
+<officetel>055-392-5364</officetel>
+<orgNm>경상남도 양산시</orgNm>
+<popfile>http://www.animal.go.kr/files/shelter/2020/07/202008161708607.jpg</popfile>
+<processState>보호중</processState>
+<sexCd>F</sexCd>
+<specialMark>갈색검정</specialMark>
+<weight>9.6(Kg)</weight>
+</item>
+<item>
+<age>2018(년생)</age>
+<careAddr>경상남도 창원시 진해구 웅천로 218 (성내동, 농업기술센터) 205번지 </careAddr>
+<careNm>진해유기동물보호소</careNm>
+<careTel>055-225-5481</careTel>
+<chargeNm>진해구</chargeNm>
+<colorCd>흰색+검정</colorCd>
+<desertionNo>448532202000694</desertionNo>
+<filename>http://www.animal.go.kr/files/shelter/2020/07/202008161608513_s.jpg</filename>
+<happenDt>20200816</happenDt>
+<happenPlace>진해루 2층 정자</happenPlace>
+<kindCd>[개] 프렌치 불독</kindCd>
+<neuterYn>N</neuterYn>
+<noticeEdt>20200824</noticeEdt>
+<noticeNo>경남-창원3-2020-00322</noticeNo>
+<noticeSdt>20200816</noticeSdt>
+<officetel>055-225-5483</officetel>
+<orgNm>경상남도 창원시 진해구</orgNm>
+<popfile>http://www.animal.go.kr/files/shelter/2020/07/202008161608513.jpg</popfile>
+<processState>보호중</processState>
+<sexCd>M</sexCd>
+<specialMark>온순 친화적, 중X, 칩X</specialMark>
+<weight>9.5(Kg)</weight>
+</item>
+<item>
+<age>2019(년생)</age>
+<careAddr>경상남도 창원시 진해구 웅천로 218 (성내동, 농업기술센터) 205번지 </careAddr>
+<careNm>진해유기동물보호소</careNm>
+<careTel>055-225-5481</careTel>
+<chargeNm>진해구</chargeNm>
+<colorCd>흰색</colorCd>
+<desertionNo>448532202000693</desertionNo>
+<filename>http://www.animal.go.kr/files/shelter/2020/07/202008161608631_s.jpg</filename>
+<happenDt>20200816</happenDt>
+<happenPlace>남문동 시티2차 지하주차장</happenPlace>
+<kindCd>[개] 스피츠</kindCd>
+<neuterYn>N</neuterYn>
+<noticeEdt>20200824</noticeEdt>
+<noticeNo>경남-창원3-2020-00321</noticeNo>
+<noticeSdt>20200816</noticeSdt>
+<officetel>055-225-5483</officetel>
+<orgNm>경상남도 창원시 진해구</orgNm>
+<popfile>http://www.animal.go.kr/files/shelter/2020/07/202008161608631.jpg</popfile>
+<processState>보호중</processState>
+<sexCd>M</sexCd>
+<specialMark>주황색 입마개 착용, 친화적, 중X, 칩X</specialMark>
+<weight>7.4(Kg)</weight>
+</item>
+</items>
+<numOfRows>30</numOfRows>
+<pageNo>1</pageNo>
+<totalCount>8779</totalCount>
+</body>
+</response>
