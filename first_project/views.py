@@ -2,8 +2,11 @@ from django.shortcuts import render, redirect
 from django.template import loader
 from django.contrib.auth.hashers import make_password, check_password
 from django.http import HttpResponse
+from first_project.models import Users
 
 # Create your views here.
+
+
 def main(request):
     template = loader.get_template('main.html')
     return HttpResponse(template.render(None, request))
@@ -33,7 +36,7 @@ def register(request):
 
 def newLogin_1(request):
     context = None
-    if request.method == "POST":
+    if request.method == "GET":
         useremail = request.POST.get('useremail', None)
         password = request.POST.get('password', None)
         try :
@@ -54,7 +57,7 @@ def newLogin_1(request):
 def only_member(request) :
     if 'user' in request.session :
         context =  { 'useremail' : request.session.get('user')}
-        return render(request, "homepage.html", context)  ## 로그인 후 페이지로 고쳐야 함
+        return render(request, "main.html", context)  ## 로그인 후 페이지로 고쳐야 함
     else :
         context = {'error' : "회원만 볼 수 있는 페이지입니다."}
         return render(request, 'newLogin_1.html', context)
