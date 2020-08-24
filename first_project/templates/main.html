@@ -27,24 +27,6 @@
         	font-weight:lighter;
         	font-size:1.2em;
         }
-        .popup {
-  			position: relative;
-			display: inline-block;
-			cursor: pointer;
-			visibility: hidden;
-			width: 160px;
-			background-color: #555;
-			color: #fff;
-			text-align: center;
-			border-radius: 6px;
-			padding: 8px 0;
-			position: absolute;
-			z-index: 1;
-			bottom: 125%;
-			left: 50%;
-			margin-left: -80px;
-			
-		}
 	</style>
 </head>
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200" id="body_id">
@@ -65,6 +47,7 @@
 					<li class="nav-item"><a class="nav-link" href="#section-portfolio">유기견 소개</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-resume">가까운 병원/센터찾기</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-coment">안내사항</a></li>
+					<li class="nav-item-login"><a class="nav-link_login" href="#section-coment" style="float:right;">로그인/회원가입</a></li>
 				</ul>
 			</div>
 		</div>
@@ -169,139 +152,117 @@
    		integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
    		crossorigin=""></script>
 	<section class="site-section" id="section-registration">
-		<div class="container">
+		<div class="container" style="width:1140; height:770;">
 			<div class="row">
 				<div class="col-md-12 mb-5">
 					<div class="section-heading text-center">
-						<h2>신고/검색하기</h2>
+						<h2>신고하기</h2>
 					</div>
 				</div>
 
-				<div class="col-md-7 mb-5 mb-md-0">
-					<form method="POST" action="" class="site-form">
-						<h3 class="mb-5">신고하기</h3>
-						<table style="border-collapse: separate; border-spacing: 0 10px; font-weight:lighter;"> <!--<tr>간 간격 주기-->
-<!--							<tr>-->
-<!--								<th>공고번호</th>-->
-<!--								<td></td>-->
-<!--							</tr>-->
-							<tr>
-								<th class="table_category">분류</th>
-								<td>
-									<select>
-										<option value="" selected disabled hidden>==선택하세요==</option>
-										<option value="말티즈">말티즈</option>
-										<option value="웰시코기">웰시코기</option>
-										<option value="요크셔테리어">요크셔테리어</option>
-										<option value="푸들">푸들</option>
-										<option value="시츄">시츄</option>
-										<option value="비숑프리제">비숑프리제</option>
-										<option value="치와와">치와와</option>
-										<option value="진돗개">진돗개</option>
-										<option value="닥스훈트">닥스훈트</option>
-										<option value="요크셔테리어">요크셔테리어</option>
-										<option value="비글">비글</option>
-										<option value="페키니즈">페키니즈</option>
-										<option value="코카스파니엘">코카스파니엘</option>
-										<option value="시바견">시바견</option>
-										<option value="핏볼테리언">핏볼테리언</option>
-										<option value="요크셔테리어">요크셔테리어</option>
-										<option value="기타">기타</option>
-									</select>
-								</td>
-							</tr>
-							<tr>
-								<th class="table_category">색상</th>
-								<td><input type="text" placeholder="색을 입력하세요." name="subject" required/></td>
-							</tr>
-							<tr>
-								<th class="table_category">접수일시</th>
-								<td><input type="date" name="day" required/></td>
-							</tr>
-							<tr>
-								<th class="table_category">성별</th>
-								<td>
-									<input type="radio" name="sex" value="남" required/>  남
-									<input type="radio" name="sex" value="여" required/>  여
-									<input type="radio" name="sex" value="확인불가" required/>  확인불가
-								</td>
-							</tr>
-							<tr>
-								<th class="table_category">특징</th>
-								<td><input type="text" placeholder="이름표, 성격, 생김새 등" name="subject" required/></td>
-							</tr>
-							<tr>
-								<th class="table_category">신고자 전화번호</th>
-								<td><input type="tel" placeholder="전화번호를 입력하세요." name="tel" required/></td>
-							</tr>
-							<tr>
-								<th class="table_category">발생장소</th>
-								<td>
-									<input type="text" placeholder="장소를 입력하세요." id="address_id" required/>
-								</td>
-							<tr>
-								<th class="table_category">공고기한</th>
-								<td style="color:orange;">신고일자로부터 15일간 공고됨</td>
-							</tr>
-						</table>
-						<div class="lost-content-info-text">
-							<span style="color:red">*유기동물 문의는 보호센터에 연락하시길 바랍니다.</span>
+				<div style="width:1140; height:770;">
+					<form method="POST" action="{% url 'register' %}" class="site-form" enctype="multipart/form-data">
+						{% csrf_token %}
+<!--						<h3 class="mb-5">신고하기</h3>-->
+						<div id="table_div" style=" float:left; width:500px; height:500px">
+							<table style="border-collapse: separate; border-spacing: 0 10px; font-weight:lighter;">
+								<tr>
+									<th class="table_category">분류</th>
+									<td>
+	<!--									<select name="type">-->
+	<!--										<option value="" selected disabled hidden>==선택하세요==</option>-->
+	<!--										<option value="말티즈" selected="selected">말티즈</option>-->
+	<!--										<option value="웰시코기" selected="selected">웰시코기</option>-->
+	<!--										<option value="요크셔테리어" selected="selected">요크셔테리어</option>-->
+	<!--										<option value="푸들" selected="selected">푸들</option>-->
+	<!--										<option value="시츄" selected="selected">시츄</option>-->
+	<!--										<option value="비숑프리제" selected="selected">비숑프리제</option>-->
+	<!--										<option value="치와와" selected="selected">치와와</option>-->
+	<!--										<option value="진돗개" selected="selected">진돗개</option>-->
+	<!--										<option value="닥스훈트" selected="selected">닥스훈트</option>-->
+	<!--										<option value="요크셔테리어" selected="selected">요크셔테리어</option>-->
+	<!--										<option value="비글" selected="selected">비글</option>-->
+	<!--										<option value="페키니즈" selected="selected">페키니즈</option>-->
+	<!--										<option value="코카스파니엘" selected="selected">코카스파니엘</option>-->
+	<!--										<option value="시바견" selected="selected">시바견</option>-->
+	<!--										<option value="핏볼테리언" selected="selected">핏볼테리언</option>-->
+	<!--										<option value="요크셔테리어" selected="selected">요크셔테리어</option>-->
+	<!--										<option value="기타" selected="selected">기타</option>-->
+	<!--									</select>-->
+										<input type="text" placeholder="견종을 입력하세요." name="type" required/>
+
+									</td>
+								</tr>
+								<tr>
+									<th class="table_category">색상</th>
+									<td><input type="text" placeholder="색을 입력하세요." name="color" required/></td>
+								</tr>
+								<tr>
+									<th class="table_category">접수일시</th>
+									<td><input type="date" name="datetime" required/></td>
+								</tr>
+								<tr>
+									<th class="table_category">성별</th>
+									<td>
+										<input type="radio" name="gender" value="남" required/>  남
+										<input type="radio" name="gender" value="여" required/>  여
+										<input type="radio" name="gender" value="확인불가" required/>  확인불가
+									</td>
+								</tr>
+								<tr>
+									<th class="table_category">특징</th>
+									<td><input type="text" placeholder="이름표, 성격, 생김새 등" name="feature" required/></td>
+								</tr>
+								<tr>
+									<th class="table_category">신고자 전화번호</th>
+									<td><input type="tel" placeholder="전화번호를 입력하세요." name="phone" required/></td>
+								</tr>
+								<tr>
+									<th class="table_category">발생장소</th>
+									<td><input type="text" placeholder="장소를 입력하세요." name="place" required/></td>
+								</tr>
+								<tr>
+									<th class="table_category">공고기한</th>
+									<td style="color:orange;">신고일자로부터 15일간 공고됨</td>
+								</tr>
+							</table>
+							<div class="lost-content-info-text">
+								<span style="color:red">*유기동물 문의는 보호센터에 연락하시길 바랍니다.</span>
+							</div>
 						</div>
+							<div style="float:right; width:500; height:500;" onchange="setThumbnail(event);">
+<!--								<h3 class="mb-5">사진 등록하기</h3>-->
+<!--									<form method="POST" action="{% url 'register' %}" enctype="multipart/form-data" onchange="setThumbnail(event);">-->
+<!--			             				{% csrf_token %}-->
+										<input type="file" name="photo" accept="image/*" >
+										<div class="image_div" id='image_container' style="width:400px; height:400px;"></div>
+			            				<script>
+											function setThumbnail(event) {
+												var reader = new FileReader();
+													reader.onload = function(event) {
+															var img = document.createElement("img");
+															img.setAttribute("src", event.target.result);
+															img.setAttribute("width", "350px");
+															img.setAttribute("height", "350px");
+															document.querySelector("div#image_container").appendChild(img); };
+															reader.readAsDataURL(event.target.files[0]);
+													}
+										</script>
+								<input type="submit" class="reg" value="제출" style="float:right;">
+    								{% if messages %}
+        								{% for message in messages %}
+         									{% if message.tags %}
+												<script>
+													alert("{{ message }}")
+												</script>
+											{% endif %}
+        								{% endfor %}
+    								{% endif %}
+
+							</div>
 					</form>
 				</div>
-				<div class="col-md-5 pl-md-5">
-					<h3 class="mb-5">사진 등록하기</h3>
-						<form method="POST" action="upload" enctype="multipart/form-data" onchange="setThumbnail(event);">
-             				<input type="file" name="photofile" accept="image/*" >
-            				<div class="image_div" id='image_container' style="width:400px; height:400px;"></div>
-            				<script>
-            				//이미지 파일 저장하기
-								function setThumbnail(event) {
-									var reader = new FileReader();
-										reader.onload = function(event) {
-												var img = document.createElement("img");
-												img.setAttribute("src", event.target.result);
-												img.setAttribute("width", "350px");
-												img.setAttribute("height", "350px");
-												document.querySelector("div#image_container").appendChild(img); };
-												reader.readAsDataURL(event.target.files[0]);
-										}
-							</script>
-<!--							<div class="popup" id="popup_login"></div>-->
-            				<input type="button" value="신고하기" id="report_btn" style="float:right;" onclick="btn_click()">
-							<script>
-								function btn_click(){
-											window.open('http://localhost:8000/first_project/newLogin_1.html','팝업창','width=400, height=300, left=300, top=150');
-<!--											document.getElementById("body_id").style.opacity='0.5';-->
-											}
-
-							</script>
-
-        				</form>
-<!--					<ul class="site-contact-details">-->
-<!--						<li>-->
-<!--							<span class="text-uppercase">Email</span>-->
-<!--							site@gmail.com-->
-<!--						</li>-->
-<!--						<li>-->
-<!--							<span class="text-uppercase">Phone</span>-->
-<!--							+30 976 1382 9921-->
-<!--						</li>-->
-<!--						<li>-->
-<!--							<span class="text-uppercase">Fax</span>-->
-<!--							+30 976 1382 9922-->
-<!--						</li>-->
-<!--						<li>-->
-<!--							<span class="text-uppercase">Address</span>-->
-<!--							San Francisco, CA <br>-->
-<!--							4th Floor8 Lower  <br>-->
-<!--							San Francisco street, M1 50F-->
-<!--						</li>-->
-<!--					</ul>-->
-				</div>
 			</div>
-
-
 		</div>
 	</section>
 

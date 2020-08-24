@@ -3236,15 +3236,23 @@ input[type="button"].btn-block {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem; }
-  .nav-link:hover, .nav-link:focus {
+  .nav-link:hover, .nav-link:focus, .nav-link_login:hover, .nav-link_login:focus {
     text-decoration: none; }
-  .nav-link.disabled {
+  .nav-link.disabled, .nav-link_login:disabled {
     color: #6c757d; }
+
+.nav-link_login {
+  display: block;
+  padding: 0.5rem 1rem;
+  float:right; }
 
 .nav-tabs {
   border-bottom: 1px solid #dee2e6; }
   .nav-tabs .nav-item {
     margin-bottom: -1px; }
+  .nav-item-login {
+    margin-bottom: -1px;
+    float:right; }
   .nav-tabs .nav-link {
     border: 1px solid transparent;
     border-top-left-radius: 0.25rem;
@@ -3292,7 +3300,8 @@ input[type="button"].btn-block {
 
 .tab-content > .active {
   display: block; }
-
+.nav-item-login{
+    align-item: right; }
 .navbar {
   position: relative;
   display: -webkit-box;

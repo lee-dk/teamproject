@@ -10,3 +10,14 @@ class Users(models.Model):
     def __str__(self):
         return self.username
 
+class Upload(models.Model):
+    # type_choices = {('a','말티즈'), ('b','푸들'),('c','시츄')}
+    # , choices = type_choices, null = True
+    type = models.CharField(max_length=10)
+    color = models.CharField(max_length=10)
+    datetime = models.DateTimeField(null=True)
+    gender = models.TextField()
+    feature = models.TextField()
+    phone = models.IntegerField()
+    place = models.TextField()
+    photo = models.FileField(blank=True, upload_to="photo_%Y_%m_%d")
