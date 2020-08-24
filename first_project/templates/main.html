@@ -27,6 +27,9 @@
         	font-weight:lighter;
         	font-size:1.2em;
         }
+        #login_div{
+        	float:right;
+        }
 	</style>
 </head>
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200" id="body_id">
@@ -47,18 +50,79 @@
 					<li class="nav-item"><a class="nav-link" href="#section-portfolio">유기견 소개</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-resume">가까운 병원/센터찾기</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-coment">안내사항</a></li>
-					<li class="nav-item-login"><a class="nav-link_login" href="#section-coment" style="float:right;">로그인/회원가입</a></li>
+<!--					<li class="nav-item-login"><a class="nav-link_login" href="#section-coment" style="float:right;">로그인/회원가입</a></li>-->
 				</ul>
 			</div>
 		</div>
 	</nav>
 
-
-
-
 	<section class="site-hero" style="background-image: url({% static 'images/main_dog.jpg' %});" id="section-home" data-stellar-background-ratio="0.5">
 		<div class="container">
 			<div class="row intro-text align-items-center justify-content-center">
+				<div id="login_div" style="display:block;">
+					 <div class="wrap">
+						 <div class="form-wrap">
+							<form id="login"  class="input-group" method="POST" action="{% url 'newLogin' %}">
+							{% csrf_token %}
+								<div>
+								<label for="useremail"></label>
+								<input type="email" class="input-field" placeholder="User Email" name="useremail" >
+								</div>
+								<div>
+								<label for="userpassword"></label>
+								<input type="password" class="input-field" placeholder="Enter Password" name="password" >
+								</div>
+								<br>
+								<input type="checkbox" class="checkbox"><span>Remember Password</span>
+
+								<button class="submit" id="login_btn">Login</button>
+								<button type="button" id="register_btn" onclick="register_btn_click();">register</button>
+							</form>
+							 <br>
+
+						</div>
+					 </div>
+				</div>
+				<div id="register_div"  style="display:none;">
+						 <div class="wrap">
+							 <div class="form-wrap">
+								<form id="register"  class="input-group" method="POST" action="{% url 'sign_in' %}">
+									{% csrf_token %}
+										<div>
+											<div>
+												<label for="username"></label>
+												<input type="text" class="input-field" placeholder="User name" name="username" required>
+											</div>
+											<div>
+												<label for="useremail"></label>
+												<input type="email" class="input-field" placeholder="Your Email" name="useremail" required>
+											</div>
+											<div>
+												<label for="password"></label>
+												<input type="password" class="input-field" placeholder="Enter Password" name="password" required>
+											</div>
+											<div>
+												<label for="password"></label>
+												<input type="password" class="input-field" placeholder="Check Password" name="re-password"required>
+											</div>
+											<button class="submit" id="register_complete">REGISTER</button>
+										</div>
+								</form>
+							 </div>
+						 </div>
+
+				</div>
+				<script>
+					function register_btn_click(){
+						$('#login_div').css('display', 'none')
+						$('#register_div').css('display', 'block')
+						//document.getElementById('login').action="{% url 'sign_in' %}"
+						//if(document.getElementById('login_div').style.display=='block'){
+						//	document.getElementById('login_div').style.display=='none';
+						//	document.getElementById('register_div').style.display=='block';
+						//}
+					}
+				</script>
 				<div class="col-md-10 text-center pt-5">
 
 					<h1 class="site-heading site-animate">발견하셨다면 주저말고
@@ -72,14 +136,15 @@
 
 
 	<section class="site-section" id="section-about">
-<!--		<div class="container">-->
+		<div class="container">
 <!--			<div class="section-heading text-center">-->
 <!--						<h2><strong style="color:orange">소개</strong> 하기</h2>-->
 <!--					</div>-->
-<!--			<div class="row mb-5 align-items-center">-->
-<!--				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">-->
+			<div class="row mb-5 align-items-center">
+				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
+
 <!--					<img src="images/Jennifer.png" alt="Image placeholder" class="img-fluid">-->
-<!--				</div>-->
+				</div>
 <!--				<div class="col-lg-5 pl-lg-5">-->
 <!--					<div class="section-heading">-->
 <!--						<h2>이동규</h2>-->
@@ -90,59 +155,8 @@
 <!--&lt;!&ndash;					<p>&ndash;&gt;-->
 <!--						<a href="#" class="social-item"><span class="icon-instagram2" onclick="location.href='https://www.instagram.com/dk_lee__/';"> instagram</span></a>-->
 <!--&lt;!&ndash;					</p>&ndash;&gt;-->
-<!--				</div>-->
-<!--			</div>-->
-
-<!--			<div class="row mb-5 align-items-center">-->
-<!--				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">-->
-<!--					<img src="images/Katrine.png" alt="Image placeholder" class="img-fluid">-->
-<!--				</div>-->
-<!--				<div class="col-lg-5 pl-lg-5">-->
-<!--					<div class="section-heading">-->
-<!--						<h2>박성준</h2>-->
-<!--					</div>-->
-<!--					<p class="lead">1993.05.04</p>-->
-<!--					<p class="lead">010-5129-4770</p>-->
-<!--					<p>-->
-<!--						<a href="#" class="social-item"><span class="icon-instagram2" onclick="location.href='https://www.instagram.com/piaojian_0504/';"></span></a>-->
-<!--					</p>-->
-<!--				</div>-->
-<!--			</div>-->
-
-<!--			<div class="row mb-5 align-items-center">-->
-<!--				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">-->
-<!--					<img src="images/Pets.png" alt="Image placeholder" class="img-fluid">-->
-<!--				</div>-->
-<!--				<div class="col-lg-5 pl-lg-5">-->
-<!--					<div class="section-heading">-->
-<!--						<h2>김민영</h2>-->
-<!--					</div>-->
-<!--					<p class="lead">1996.02.07</p>-->
-<!--					<p class="lead">010-9998-2948</p>-->
-<!--					<p>-->
-<!--						<a href="#" class="social-item"><span class="icon-instagram2" onclick="location.href='https://www.instagram.com/my_kim27/';"></span></a>-->
-<!--					</p>-->
-<!--				</div>-->
-<!--			</div>-->
-
-<!--			<div class="row mb-5 align-items-center">-->
-<!--				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">-->
-<!--					<img src="images/Woody.png" alt="Image placeholder" class="img-fluid">-->
-<!--				</div>-->
-<!--				<div class="col-lg-5 pl-lg-5">-->
-<!--					<div class="section-heading">-->
-<!--						<h2>홍연하</h2>-->
-<!--					</div>-->
-<!--					<p class="lead">1997.01.10</p>-->
-<!--					<p class="lead">010-9338-1483</p>-->
-<!--					<p>-->
-<!--						<a href="#" class="social-item"><span class="icon-instagram2" onclick="location.href='https://www.instagram.com/yyeoona/';"></span></a>-->
-<!--					</p>-->
-<!--				</div>-->
-<!--			</div>-->
-
-
-<!--		</div>-->
+				</div>
+			</div>
 	</section>
 
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
