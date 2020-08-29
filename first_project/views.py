@@ -27,7 +27,7 @@ def register(request):
     context = Upload(type=type, color=color, datetime=datetime, gender=gender, feature=feature,phone=phone,place=place,photo=photo)
     context.save()
     messages.success(request, "신고 접수 완료되었습니다!")
-    return redirect("main")
+    return redirect("main_onlyMember")
 
 def newLogin(request):
     context = None
@@ -41,13 +41,23 @@ def newLogin(request):
         else :
             if check_password(password, user.password):
                 request.session['user'] = useremail
-                return redirect('onlymember')
+                messages.success(request, "환영합니다! 로그인이 완료되었습니다!")
+                return redirect('main_onlyMember')
             else :
                 context = { 'error' : '패스워드를 확인하세요'}
     else :
         if 'user' in request.session:
             context = {'msg': '이미 로그인 하셨습니다.'}
     return render(request, 'main.html', context)  ## 로그인 후 홈페이지로 고쳐야 함
+
+def main_onlyMember(request) :
+    if 'user' in request.session :
+        context =  { 'useremail' : request.session.get('user')}
+        return render(request, "main_onlyMember.html", context)  ## 로그인 후 페이지로 고쳐야 함
+    else :
+        context = {'error' : "회원만 볼 수 있는 페이지입니다."}
+        return render(request, 'main.html', context)
+
 
 def sign_in(request):
     if request.method =='GET':
@@ -69,7 +79,16 @@ def sign_in(request):
                 password=make_password(password),
             )
             users.save()
+            messages.success(request, "회원가입이 완료되었습니다!")
             # return redirect('main')
 
         # return render(request, res_data)
         return render(request, 'main.html', res_data)
+
+def logout(request):
+    if 'user' in request.session:
+        del request.session['user']
+        context = {'msg': '로그아웃 완료'}
+    else:
+        context = {'msg': '로그인 상태가 아닙니다!'}
+    return render(request, 'main.html', context)  ## 초기화면으로 고쳐야 함
