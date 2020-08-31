@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.template import loader
 from django.http import HttpResponse
+from django.core.paginator import Paginator
 from django.contrib.auth.hashers import make_password, check_password
 from .models import Upload, Users
 import datetime
@@ -24,10 +25,19 @@ def register(request):
     phone = request.POST['phone']
     place = request.POST['place']
     photo = request.FILES['photo']
-    context = Upload(type=type, color=color, datetime=datetime, gender=gender, feature=feature,phone=phone,place=place,photo=photo)
+    context = Upload(type=type, color=color, datetime=datetime, gender=gender, feature=feature, phone=phone, place=place, photo=photo)
     context.save()
+
     messages.success(request, "신고 접수 완료되었습니다!")
     return redirect("main_onlyMember")
+
+def search(request):
+    page = request.GET.get('page', 1)
+    context_list = Upload.objects.all()
+    paginator = Paginator(context_list, 3)
+    context_listpage = paginator.get_page(page)
+    search_list = {"list": context_list}
+    return render(request, 'main_onlyMember.html', search_list)
 
 def newLogin(request):
     context = None
@@ -48,15 +58,17 @@ def newLogin(request):
     else :
         if 'user' in request.session:
             context = {'msg': '이미 로그인 하셨습니다.'}
-    return render(request, 'main.html', context)  ## 로그인 후 홈페이지로 고쳐야 함
+    return render(request, 'main.html', context)
 
 def main_onlyMember(request) :
-    if 'user' in request.session :
-        context =  { 'useremail' : request.session.get('user')}
-        return render(request, "main_onlyMember.html", context)  ## 로그인 후 페이지로 고쳐야 함
-    else :
-        context = {'error' : "회원만 볼 수 있는 페이지입니다."}
-        return render(request, 'main.html', context)
+    # if 'user' in request.session :
+        context_list = Upload.objects.all()
+        context = {"list": context_list}
+        # context =  { 'useremail' : request.session.get('user')}
+        return render(request, "main_onlyMember.html", context)
+    # else :
+    #     context = {'error' : "회원만 볼 수 있는 페이지입니다."}
+    #     return render(request, 'main.html', context)
 
 
 def sign_in(request):

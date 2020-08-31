@@ -18,7 +18,7 @@
 	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 <!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
-<!--  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <!--  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>-->
 <!--  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>-->
 	<style>
@@ -42,6 +42,17 @@
         	left: 95%;
         	top: 20px;
         }
+		.search:hover {
+			background-color : black;
+		}
+		.search_table {
+			width:95%;
+			margin-left : auto;
+			margin-right : auto;
+		}
+		.search_table_td{
+			border-bottom : 1px dotted gray;
+		}
 	</style>
 </head>
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200" id="body_id">
@@ -63,7 +74,6 @@
 					<li class="nav-item"><a class="nav-link" href="#section-portfolio">유기견 소개</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-resume">가까운 병원/센터찾기</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-coment">안내사항</a></li>
-<!--					<li class="nav-item-login"><a class="nav-link_login" href="#section-coment" style="float:right;">로그인/회원가입</a></li>-->
 				</ul>
 			</div>
 		</div>
@@ -80,31 +90,6 @@
 				</div>
 			</div>
 		</div>
-	</section>
-
-
-	<section class="site-section" id="section-about">
-		<div class="container">
-<!--			<div class="section-heading text-center">-->
-<!--						<h2><strong style="color:orange">소개</strong> 하기</h2>-->
-<!--					</div>-->
-			<div class="row mb-5 align-items-center">
-				<div class="col-lg-7 pr-lg-5 mb-5 mb-lg-0">
-
-<!--					<img src="images/Jennifer.png" alt="Image placeholder" class="img-fluid">-->
-				</div>
-<!--				<div class="col-lg-5 pl-lg-5">-->
-<!--					<div class="section-heading">-->
-<!--						<h2>이동규</h2>-->
-<!--					</div>-->
-<!--					<p class="lead">1993.11.29</p>-->
-<!--					<p class="lead">010-8959-4779</p>-->
-<!--					<p class="lead">dlehdrb1129@naver.com</p>-->
-<!--&lt;!&ndash;					<p>&ndash;&gt;-->
-<!--						<a href="#" class="social-item"><span class="icon-instagram2" onclick="location.href='https://www.instagram.com/dk_lee__/';"> instagram</span></a>-->
-<!--&lt;!&ndash;					</p>&ndash;&gt;-->
-				</div>
-			</div>
 	</section>
 
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
@@ -226,6 +211,61 @@
 					</form>
 				</div>
 			</div>
+		</div>
+	</section>
+
+	<section class="site-section" id="section-search">
+		<div class="container2" style="">
+			<div class="section-heading text-center">
+				<h2><strong style="color:orange">조회</strong> 하기</h2>
+			</div>
+					<table class="search_table">
+						<tr class="search" style="text-align:center;">
+							<th width="5%">분류</th>
+							<th width="5%">색상</th>
+							<th width="15%">접수일시</th>
+							<th width="10%">성별</th>
+							<th width="15%">특징</th>
+							<th width="15%">발생장소</th>
+							<th width="15%">신고자 전화번호</th>
+							<th width="20%">사진</th>
+						</tr>
+						{% for context in list %}
+						<tr class="search">
+<!--								<td width="7%">{{ news_data.pk }}</td>-->
+<!--								<td width="50%" id="title_click" onclick="ajax_uu_request({{ news_data.pk }})">{{ news_data.title }}</td>-->
+							<td class="search_table_td">{{ context.type }}</td>
+							<td class="search_table_td">{{ context.color }}</td>
+							<td class="search_table_td">{{ context.datetime }}</td>
+							<td class="search_table_td">{{ context.gender }}</td>
+							<td class="search_table_td">{{ context.feature }}</td>
+							<td class="search_table_td">{{ context.place }}</td>
+							<td class="search_table_td">{{ context.phone }}</td>
+							<td class="search_table_td"><img src="{{context.photo.path}}" width="100" height="100" /></td>
+<!--								<td>{{ news_data.cnt }}</td>-->
+						</tr>
+						{% endfor %}
+<!--							<script>-->
+<!--								function ajax_uu_request() {-->
+<!--									   const dom1 = $('[type="type"]');-->
+<!--									   const dom2 = $('[color="color"]');-->
+<!--									   dom1.removeAttr("placeholder");-->
+<!--									   dom1.attr("value", jsonObj.type);-->
+<!--									   dom2.removeAttr("placeholder");-->
+<!--									   dom2.text(jsonObj.color);-->
+<!--								}-->
+<!--							</script>-->
+						</table>
+<!--						<h5>-->
+<!--							{% if context_list.has_previous %}-->
+<!--								<a href="?page={{context_list.number|add:-1}}">이전페이지</a>-->
+<!--							{% endif %}-->
+<!--							Page {{ context_list.number }} / {{ context_list.paginator.num_pages }}-->
+<!--							{% if context_list.has_next %}-->
+<!--								<a href="?page={{context_list.number|add:+1}}">다음페이지</a>-->
+<!--							{% endif %}-->
+<!--						</h5>-->
+
 		</div>
 	</section>
 
