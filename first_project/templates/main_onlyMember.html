@@ -37,11 +37,17 @@
         #login_div{
         	float:right;
         }
+        .logout_btn{
+        	position: absolute;
+        	left: 95%;
+        	top: 20px;
+        }
 	</style>
 </head>
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200" id="body_id">
 
 	<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
+					<button class="logout_btn" type="button" id="logout" style="float:right;" onclick="location.href='http://localhost:8000/first_project/main/'">LOGOUT</button>
 
 		<div class="container">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,7 +59,7 @@
 					<li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
 <!--					<li class="nav-item"><a class="nav-link" href="#section-about">소개하기</a></li>-->
 					<li class="nav-item"><a class="nav-link" href="#section-registration">신고하기</a></li>
-					<li class="nav-item"><a class="nav-link" href="#section-abc">조회하기</a></li>
+					<li class="nav-item"><a class="nav-link" href="#section-search">조회하기</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-portfolio">유기견 소개</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-resume">가까운 병원/센터찾기</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-coment">안내사항</a></li>
