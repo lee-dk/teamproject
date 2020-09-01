@@ -14,6 +14,7 @@ def main(request):
     # template = loader.get_template('main.html')
     page = request.GET.get('page', 1)
     context_list = Upload.objects.all()
+    context_list = context_list.order_by('-datetime')
     paginator = Paginator(context_list, 3)
     listpage = paginator.get_page(page)
     context = {"context_list": listpage}
@@ -69,6 +70,7 @@ def newLogin(request):
 def main_onlyMember(request) :
     page = request.GET.get('page', 1)
     context_list = Upload.objects.all()
+    context_list = context_list.order_by('-datetime')
     paginator = Paginator(context_list, 3)
     listpage = paginator.get_page(page)
     context = {"context_list": listpage}
