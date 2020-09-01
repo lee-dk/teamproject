@@ -18,6 +18,6 @@ class Upload(models.Model):
     datetime = models.DateTimeField(null=True)
     gender = models.TextField()
     feature = models.TextField()
-    phone = models.IntegerField()
+    phone = models.CharField(max_length=15)
     place = models.TextField()
     photo = models.FileField(blank=True)  #, upload_to="photo_%Y_%m_%d")
