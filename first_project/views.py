@@ -11,8 +11,14 @@ from django.contrib import messages
 
 
 def main(request):
-    template = loader.get_template('main.html')
-    return HttpResponse(template.render(None, request))
+    # template = loader.get_template('main.html')
+    page = request.GET.get('page', 1)
+    context_list = Upload.objects.all()
+    paginator = Paginator(context_list, 3)
+    listpage = paginator.get_page(page)
+    context = {"context_list": listpage}
+    return render(request, "main.html", context)
+    # return HttpResponse(template.render(None, request))
 
 
 def register(request):
@@ -31,13 +37,13 @@ def register(request):
     messages.success(request, "신고 접수 완료되었습니다!")
     return redirect("main_onlyMember")
 
-def search(request):
-    page = request.GET.get('page', 1)
-    context_list = Upload.objects.all()
-    paginator = Paginator(context_list, 3)
-    context_listpage = paginator.get_page(page)
-    search_list = {"list": context_list}
-    return render(request, 'main_onlyMember.html', search_list)
+# def search(request):
+#     page = request.GET.get('page', 1)
+#     context_list = Upload.objects.all()
+#     paginator = Paginator(context_list, 3)
+#     context_listpage = paginator.get_page(page)
+#     search_list = {"list": context_list}
+#     return render(request, 'main_onlyMember.html', search_list)
 
 def newLogin(request):
     context = None
@@ -61,14 +67,12 @@ def newLogin(request):
     return render(request, 'main.html', context)
 
 def main_onlyMember(request) :
-    # if 'user' in request.session :
-        context_list = Upload.objects.all()
-        context = {"list": context_list}
-        # context =  { 'useremail' : request.session.get('user')}
-        return render(request, "main_onlyMember.html", context)
-    # else :
-    #     context = {'error' : "회원만 볼 수 있는 페이지입니다."}
-    #     return render(request, 'main.html', context)
+    page = request.GET.get('page', 1)
+    context_list = Upload.objects.all()
+    paginator = Paginator(context_list, 3)
+    listpage = paginator.get_page(page)
+    context = {"context_list": listpage}
+    return render(request, "main_onlyMember.html", context)
 
 
 def sign_in(request):

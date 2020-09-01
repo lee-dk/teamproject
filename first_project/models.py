@@ -20,4 +20,4 @@ class Upload(models.Model):
     feature = models.TextField()
     phone = models.IntegerField()
     place = models.TextField()
-    photo = models.FileField(blank=True)
+    photo = models.FileField(blank=True)  #, upload_to="photo_%Y_%m_%d")
