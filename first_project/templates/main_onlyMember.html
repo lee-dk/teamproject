@@ -53,10 +53,8 @@
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200" id="body_id">
 
 	<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
-<!--		<button class="logout_btn" type="button" id="logout" style="float:right;" onclick="location.href='http://localhost:8000/first_project/main/'">LOGOUT</button>-->
-
 		<div class="container" style="">
-			<img src="{% static 'images/logo_2.png' %}" style="float:left; height:60px;">
+			<img src="{% static 'images/logo_2.png' %}" style="float:left; height:60px;" onclick="location.href='http://localhost:8000/first_project/main_onlyMember/'">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -69,7 +67,7 @@
 					<li class="nav-item"><a class="nav-link" href="#section-map">가까운 병원찾기</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-coment">안내사항</a></li>
 				</ul>
-				<button type="button" id="logout_btn" style="float:right; height:30px; border: 0;" onclick="location.href='http://localhost:8000/first_project/main/'">로그아웃</button>
+				<button type="button" id="logout_btn" style="float:right; height:30px; border: 0; cursor:hand;" onclick="location.href='http://localhost:8000/first_project/main/'">로그아웃</button>
 			</div>
 		</div>
 	</nav>
