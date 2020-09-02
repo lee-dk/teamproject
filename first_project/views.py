@@ -54,7 +54,9 @@ def newLogin(request):
         try :
             user = Users.objects.get(useremail=useremail)
         except Users.DoesNotExist :
-            context = {'error': '아이디를 확인하세요'}
+            # context = {'error': '아이디를 확인하세요'}
+            messages.error(request, "가입된 아이디가 아닙니다.")
+            return redirect('main')
         else :
             if check_password(password, user.password):
                 request.session['user'] = useremail
