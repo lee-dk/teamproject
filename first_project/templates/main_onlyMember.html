@@ -32,10 +32,9 @@
         #login_div{
         	float:right;
         }
-        .logout_btn{
-        	position: absolute;
-        	left: 95%;
-        	top: 20px;
+        #logout_btn:hover{
+        	color:#bac964;
+        	border: 0;
         }
 		.search_table {
 			width:75%;
@@ -54,10 +53,10 @@
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200" id="body_id">
 
 	<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
-		<button class="logout_btn" type="button" id="logout" style="float:right;" onclick="location.href='http://localhost:8000/first_project/main/'">LOGOUT</button>
+<!--		<button class="logout_btn" type="button" id="logout" style="float:right;" onclick="location.href='http://localhost:8000/first_project/main/'">LOGOUT</button>-->
 
-		<div class="container">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+		<div class="container" style="">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
@@ -70,6 +69,7 @@
 					<li class="nav-item"><a class="nav-link" href="#section-portfolio">유기견 소개</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-map">가까운 병원/센터찾기</a></li>
 					<li class="nav-item"><a class="nav-link" href="#section-coment">안내사항</a></li>
+					<li class="nav-item"><button type="button" id="logout_btn" style="float:right; margin-top:10px; margin-left:50px; width:80px; height:35px;" onclick="location.href='http://localhost:8000/first_project/main/'">로그아웃</button></li>
 				</ul>
 			</div>
 		</div>
@@ -309,16 +309,16 @@
 												"</div>"+
 												"</div></p></div>" +
 												"<div id='myModal" + num + "' class='modal'><div class='modal-content' style='width:500px; height:auto; margin:0 auto; top:30%; margin-top:-150px;'>" +
-												"<span onclick=modal_n(" + num + ") style='text-align:right;' class='close'>&times;</span>" +
+												"<span onclick=modal_n(" + num + ") style='text-align:right; margin-right:25px; margin-top:10px;' class='close'>&times;</span>" +
 												"<h3 style='color:black;'>상세보기</h3>" +
-												"<div style='text-align:center;margin-bottom:5px;'><img style='width:80%;' src='"+picture+"'></div>" +
+												"<div style='text-align:center;margin-bottom:5px;'><img style='width:80%; margin-bottom:15px;' src='"+picture+"'></div>" +
 												"<div style='color:black'>보호시설 : " + shelter.toLocaleString() +
 												"</div><div style='color:black'>전화번호 : "+ tel.toLocaleString() +
 												"</div><div style='color:black'>등록번호 : "+ notice.toLocaleString() +
 												"</div><div style='color:black'>발견장소 : "+ place.toLocaleString() +
 												"</div><div style='color:black'>견종 : "+ type.toLocaleString() +
 												"</div><div style='color:black'>나이 : "+ age.toLocaleString() +
-												"</div><div style='color:black; margin-bottom:50px;'>무게 : "+ weight.toLocaleString() +
+												"</div><div style='color:black; margin-bottom:30px;'>무게 : "+ weight.toLocaleString() +
 												"</div></div></div>"
 
 												num += 1;
@@ -385,16 +385,16 @@
 												"</div>"+
 												"</div></p></div>" +
 												"<div id='myModal2" + num2 + "' class='modal'><div class='modal-content' style='width:500px; height:auto; margin:0 auto; top:30%; margin-top:-150px;'>" +
-												"<span onclick=modal_n2(" + num2 + ") style='text-align:right;' class='close'>&times;</span>" +
+												"<span onclick=modal_n2(" + num2 + ") style='text-align:right; margin-right:25px; margin-top:10px;' class='close'>&times;</span>" +
 												"<h3 style='color:black;'>상세보기</h3>" +
-												"<div style='text-align:center;'><img style='width:60%;' src='"+picture+"'></div>" +
+												"<div style='text-align:center;'><img style='width:60%; margin-bottom:15px;' src='"+picture+"'></div>" +
 												"<div style='color:black'>보호시설 : " + shelter.toLocaleString() +
 												"</div><div style='color:black'>전화번호 : "+ tel.toLocaleString() +
 												"</div><div style='color:black'>등록번호 : "+ notice.toLocaleString() +
 												"</div><div style='color:black'>발견장소 : "+ place.toLocaleString() +
 												"</div><div style='color:black'>견종 : "+ type.toLocaleString() +
 												"</div><div style='color:black'>나이 : "+ age.toLocaleString() +
-												"</div><div style='color:black; margin-bottom:50px;'>무게 : "+ weight.toLocaleString() +
+												"</div><div style='color:black; margin-bottom:30px;'>무게 : "+ weight.toLocaleString() +
 												"</div></div></div>"
 
 												num2 += 1;
@@ -461,16 +461,16 @@
 												"</div>"+
 												"</div></p></div>" +
 												"<div id='myModal3" + num3 + "' class='modal'><div class='modal-content' style='width:500px; height:auto; margin:0 auto; top:30%; margin-top:-150px;'>" +
-												"<span onclick=modal_n3(" + num3 + ") style='text-align:right;' class='close'>&times;</span>" +
+												"<span onclick=modal_n3(" + num3 + ") style='text-align:right; margin-right:25px; margin-top:10px;' class='close'>&times;</span>" +
 												"<h3 style='color:black;'>상세보기</h3>" +
-												"<div style='text-align:center;'><img style='width:60%;' src='"+picture+"'></div>" +
+												"<div style='text-align:center;'><img style='width:60%; margin-bottom:15px;' src='"+picture+"'></div>" +
 												"<div style='color:black'>보호시설 : " + shelter.toLocaleString() +
 												"</div><div style='color:black'>전화번호 : "+ tel.toLocaleString() +
 												"</div><div style='color:black'>등록번호 : "+ notice.toLocaleString() +
 												"</div><div style='color:black'>발견장소 : "+ place.toLocaleString() +
 												"</div><div style='color:black'>견종 : "+ type.toLocaleString() +
 												"</div><div style='color:black'>나이 : "+ age.toLocaleString() +
-												"</div><div style='color:black; margin-bottom:50px;'>무게 : "+ weight.toLocaleString() +
+												"</div><div style='color:black; margin-bottom:30px;'>무게 : "+ weight.toLocaleString() +
 												"</div></div></div>"
 
 												num3 += 1;
@@ -534,16 +534,16 @@
 												"</div>"+
 												"</div></p></div>" +
 												"<div id='myModal4" + num4 + "' class='modal'><div class='modal-content' style='width:500px; height:auto; margin:0 auto; top:30%; margin-top:-150px;'>" +
-												"<span onclick=modal_n4(" + num4 + ") style='text-align:right;' class='close'>&times;</span>" +
+												"<span onclick=modal_n4(" + num4 + ") style='text-align:right; margin-right:25px; margin-top:10px;' class='close'>&times;</span>" +
 												"<h3 style='color:black;'>상세보기</h3>" +
-												"<div style='text-align:center;'><img style='width:300px; height:250px;' src='"+picture+"'></div>" +
+												"<div style='text-align:center;'><img style='width:300px; height:350px; margin-bottom:15px;' src='"+picture+"'></div>" +
 												"<div style='color:black'>보호시설 : " + shelter.toLocaleString() +
 												"</div><div style='color:black'>전화번호 : "+ tel.toLocaleString() +
 												"</div><div style='color:black'>등록번호 : "+ notice.toLocaleString() +
 												"</div><div style='color:black'>발견장소 : "+ place.toLocaleString() +
 												"</div><div style='color:black'>견종 : "+ type.toLocaleString() +
 												"</div><div style='color:black'>나이 : "+ age.toLocaleString() +
-												"</div><div style='color:black; margin-bottom:50px;'>무게 : "+ weight.toLocaleString() +
+												"</div><div style='color:black; margin-bottom:30px;'>무게 : "+ weight.toLocaleString() +
 												"</div></div></div>"
 
 												num4 += 1;
@@ -615,7 +615,7 @@
 							  if(dom_map) {
 							   var map = new google.maps.Map(dom_map, {
 								  center: { lat: lat, lng: lng},
-									zoom: 10,
+									zoom: 16,
 										  });
 							var icon = {
 							url : '{% static "map/pointer.webp" %}',
