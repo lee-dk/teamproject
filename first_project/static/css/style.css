@@ -60,9 +60,10 @@ a {
   background: none;
   position: absolute;
   top: 20px;
-  width: 70%;
+  width: 100%;
   z-index: 200;
-  background: #fff; }
+  background: #fff;
+  }
   .site-navbar .navbar-brand {
     display: inline-block;
     border: 2px solid #fff;
