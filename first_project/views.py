@@ -52,10 +52,10 @@ def newLogin(request):
         useremail = request.POST.get('useremail', None)
         password = request.POST.get('password', None)
         try :
-            user = Users.objects.get(useremail=useremail)
+            user = Users.objects.get(useremail=useremail, password=password)
         except Users.DoesNotExist :
             # context = {'error': '아이디를 확인하세요'}
-            messages.error(request, "가입된 아이디가 아닙니다.")
+            messages.error(request, "아이디 또는 비밀번호를 확인하세요.")
             return redirect('main')
         else :
             if check_password(password, user.password):
