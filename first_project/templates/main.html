@@ -49,11 +49,34 @@
 		.search_table_td{
 			border-bottom : 1px dotted gray;
 		}
+		.modal {
+            //overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+        }
+        /* Modal Content/Box */
+        .modal-content {
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+        }
+        /* The Close Button */
+        .close {
+            color: #aaa;
+            font-size: 35px;
+            text-align:right;
+            margin-right:10px;
+            margin-top:5px;
+        }
+        .close:hover, .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
 	</style>
 </head>
 <body data-spy="scroll" data-target="#pb-navbar" data-offset="200" id="body_id">
 
-	<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
+	<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar" style="width: 100%;">
 		<div class="container">
 			<img src="{% static 'images/logo_2.png' %}" style="float:left; height:60px; cursor:hand;" onclick="location.href='http://localhost:8000/first_project/main/'">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
@@ -358,8 +381,8 @@
 												"</div><div>"+ weight.toLocaleString() +
 												"</div>"+
 												"</div></p></div>" +
-												"<div id='myModal" + num + "' class='modal'><div class='modal-content' style='width:500px; height:auto; margin:0 auto; top:30%; margin-top:-150px;'>" +
-												"<span onclick=modal_n(" + num + ") style='text-align:right;' class='close'>&times;</span>" +
+												"<div id='myModal" + num + "' class='modal'><div class='modal-content' style='width:500px; height:auto; top:30%; margin-top:-150px;'>" +
+												"<span onclick=modal_n(" + num + ") class='close'>&times;</span>" +
 												"<h3 style='color:black;'>상세보기</h3>" +
 												"<div style='text-align:center;margin-bottom:5px;'><img style='width:80%;' src='"+picture+"'></div>" +
 												"<div style='color:black'>보호시설 : " + shelter.toLocaleString() +
@@ -368,7 +391,7 @@
 												"</div><div style='color:black'>발견장소 : "+ place.toLocaleString() +
 												"</div><div style='color:black'>견종 : "+ type.toLocaleString() +
 												"</div><div style='color:black'>나이 : "+ age.toLocaleString() +
-												"</div><div style='color:black; margin-bottom:50px;'>무게 : "+ weight.toLocaleString() +
+												"</div><div style='color:black; margin-bottom:30px;'>무게 : "+ weight.toLocaleString() +
 												"</div></div></div>"
 
 												num += 1;
@@ -434,8 +457,8 @@
 												"</div><div>"+ weight.toLocaleString() +
 												"</div>"+
 												"</div></p></div>" +
-												"<div id='myModal2" + num2 + "' class='modal'><div class='modal-content' style='width:500px; height:auto; margin:0 auto; top:30%; margin-top:-150px;'>" +
-												"<span onclick=modal_n2(" + num2 + ") style='text-align:right;' class='close'>&times;</span>" +
+												"<div id='myModal2" + num2 + "' class='modal'><div class='modal-content' style='width:500px; height:auto; top:30%; margin-top:-150px;'>" +
+												"<span onclick=modal_n2(" + num2 + ") class='close'>&times;</span>" +
 												"<h3 style='color:black;'>상세보기</h3>" +
 												"<div style='text-align:center;'><img style='width:60%;' src='"+picture+"'></div>" +
 												"<div style='color:black'>보호시설 : " + shelter.toLocaleString() +
@@ -444,7 +467,7 @@
 												"</div><div style='color:black'>발견장소 : "+ place.toLocaleString() +
 												"</div><div style='color:black'>견종 : "+ type.toLocaleString() +
 												"</div><div style='color:black'>나이 : "+ age.toLocaleString() +
-												"</div><div style='color:black; margin-bottom:50px;'>무게 : "+ weight.toLocaleString() +
+												"</div><div style='color:black; margin-bottom:30px;'>무게 : "+ weight.toLocaleString() +
 												"</div></div></div>"
 
 												num2 += 1;
@@ -510,8 +533,8 @@
 												"</div><div>"+ weight.toLocaleString() +
 												"</div>"+
 												"</div></p></div>" +
-												"<div id='myModal3" + num3 + "' class='modal'><div class='modal-content' style='width:500px; height:auto; margin:0 auto; top:30%; margin-top:-150px;'>" +
-												"<span onclick=modal_n3(" + num3 + ") style='text-align:right;' class='close'>&times;</span>" +
+												"<div id='myModal3" + num3 + "' class='modal'><div class='modal-content' style='width:500px; height:auto; top:30%; margin-top:-150px;'>" +
+												"<span onclick=modal_n3(" + num3 + ") class='close'>&times;</span>" +
 												"<h3 style='color:black;'>상세보기</h3>" +
 												"<div style='text-align:center;'><img style='width:60%;' src='"+picture+"'></div>" +
 												"<div style='color:black'>보호시설 : " + shelter.toLocaleString() +
@@ -520,7 +543,7 @@
 												"</div><div style='color:black'>발견장소 : "+ place.toLocaleString() +
 												"</div><div style='color:black'>견종 : "+ type.toLocaleString() +
 												"</div><div style='color:black'>나이 : "+ age.toLocaleString() +
-												"</div><div style='color:black; margin-bottom:50px;'>무게 : "+ weight.toLocaleString() +
+												"</div><div style='color:black; margin-bottom:30px;'>무게 : "+ weight.toLocaleString() +
 												"</div></div></div>"
 
 												num3 += 1;
@@ -583,8 +606,8 @@
 												"</div><div>"+ weight.toLocaleString() +
 												"</div>"+
 												"</div></p></div>" +
-												"<div id='myModal4" + num4 + "' class='modal'><div class='modal-content' style='width:500px; height:auto; margin:0 auto; top:30%; margin-top:-150px;'>" +
-												"<span onclick=modal_n4(" + num4 + ") style='text-align:right;' class='close'>&times;</span>" +
+												"<div id='myModal4" + num4 + "' class='modal'><div class='modal-content' style='width:500px; height:auto top:30%; margin-top:-150px;'>" +
+												"<span onclick=modal_n4(" + num4 + ") class='close'>&times;</span>" +
 												"<h3 style='color:black;'>상세보기</h3>" +
 												"<div style='text-align:center;'><img style='width:300px; height:250px;' src='"+picture+"'></div>" +
 												"<div style='color:black'>보호시설 : " + shelter.toLocaleString() +
@@ -593,7 +616,7 @@
 												"</div><div style='color:black'>발견장소 : "+ place.toLocaleString() +
 												"</div><div style='color:black'>견종 : "+ type.toLocaleString() +
 												"</div><div style='color:black'>나이 : "+ age.toLocaleString() +
-												"</div><div style='color:black; margin-bottom:50px;'>무게 : "+ weight.toLocaleString() +
+												"</div><div style='color:black; margin-bottom:30px;'>무게 : "+ weight.toLocaleString() +
 												"</div></div></div>"
 
 												num4 += 1;
